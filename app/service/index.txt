@@ -1,0 +1,656 @@
+2020-11-16T18:57:44.675+0800 I CONTROL  [initandlisten] MongoDB starting : pid=145304 port=27017 dbpath=/www/server/mongodb/data 64-bit host=VM-0-14-centos
+2020-11-16T18:57:44.675+0800 I CONTROL  [initandlisten] db version v4.0.10
+2020-11-16T18:57:44.675+0800 I CONTROL  [initandlisten] git version: c389e7f69f637f7a1ac3cc9fae843b635f20b766
+2020-11-16T18:57:44.675+0800 I CONTROL  [initandlisten] allocator: tcmalloc
+2020-11-16T18:57:44.675+0800 I CONTROL  [initandlisten] modules: none
+2020-11-16T18:57:44.675+0800 I CONTROL  [initandlisten] build environment:
+2020-11-16T18:57:44.675+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2020-11-16T18:57:44.675+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2020-11-16T18:57:44.675+0800 I CONTROL  [initandlisten] options: { config: "/www/server/mongodb/config.conf", net: { bindIp: "127.0.0.1", port: 27017 }, processManagement: { fork: true, pidFilePath: "/www/server/mongodb/log/configsvr.pid" }, security: { authorization: "disabled", javascriptEnabled: false }, storage: { dbPath: "/www/server/mongodb/data", directoryPerDB: true, journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/www/server/mongodb/log/config.log" } }
+2020-11-16T18:57:44.676+0800 I STORAGE  [initandlisten] 
+2020-11-16T18:57:44.676+0800 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-11-16T18:57:44.676+0800 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-11-16T18:57:44.676+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=402M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2020-11-16T18:57:45.253+0800 I STORAGE  [initandlisten] WiredTiger message [1605524265:253077][145304:0x7fb4c42c3a40], txn-recover: Set global recovery timestamp: 0
+2020-11-16T18:57:45.270+0800 I RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-11-16T18:57:45.297+0800 I CONTROL  [initandlisten] 
+2020-11-16T18:57:45.297+0800 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2020-11-16T18:57:45.297+0800 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2020-11-16T18:57:45.297+0800 I CONTROL  [initandlisten] 
+2020-11-16T18:57:45.297+0800 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. rlimits set to 7211 processes, 100001 files. Number of processes should be at least 50000.5 : 0.5 times number of files.
+2020-11-16T18:57:45.297+0800 I CONTROL  [initandlisten] 
+2020-11-16T18:57:45.297+0800 I STORAGE  [initandlisten] createCollection: admin.system.version with provided UUID: a0159cc4-14d8-4462-8b32-e9bcdc032257
+2020-11-16T18:57:45.320+0800 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 4.0
+2020-11-16T18:57:45.323+0800 I STORAGE  [initandlisten] createCollection: local.startup_log with generated UUID: 841dba52-2abd-4c03-87dc-86b1eb167130
+2020-11-16T18:57:45.350+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/www/server/mongodb/data/diagnostic.data'
+2020-11-16T18:57:45.350+0800 I NETWORK  [initandlisten] waiting for connections on port 27017
+2020-11-16T18:57:45.355+0800 I STORAGE  [LogicalSessionCacheRefresh] createCollection: config.system.sessions with generated UUID: 20cac8ce-295b-4e35-b63e-5f19e79d9b32
+2020-11-16T18:57:45.403+0800 I INDEX    [LogicalSessionCacheRefresh] build index on: config.system.sessions properties: { v: 2, key: { lastUse: 1 }, name: "lsidTTLIndex", ns: "config.system.sessions", expireAfterSeconds: 1800 }
+2020-11-16T18:57:45.403+0800 I INDEX    [LogicalSessionCacheRefresh] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-16T18:57:45.405+0800 I INDEX    [LogicalSessionCacheRefresh] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:40:14.026+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:51360 #1 (1 connection now open)
+2020-11-17T17:40:14.027+0800 I NETWORK  [conn1] received client metadata from 127.0.0.1:51360 conn1: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-11-17T17:42:44.102+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:51528 #2 (2 connections now open)
+2020-11-17T17:42:44.102+0800 I NETWORK  [conn2] received client metadata from 127.0.0.1:51528 conn2: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-11-17T17:42:44.128+0800 I NETWORK  [conn2] end connection 127.0.0.1:51528 (1 connection now open)
+2020-11-17T17:43:00.837+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:51546 #3 (2 connections now open)
+2020-11-17T17:43:00.838+0800 I NETWORK  [conn3] received client metadata from 127.0.0.1:51546 conn3: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-11-17T17:43:00.846+0800 I NETWORK  [conn3] end connection 127.0.0.1:51546 (1 connection now open)
+2020-11-17T17:43:10.843+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:51556 #4 (2 connections now open)
+2020-11-17T17:43:10.843+0800 I NETWORK  [conn4] received client metadata from 127.0.0.1:51556 conn4: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-11-17T17:43:10.845+0800 I STORAGE  [conn4] createCollection: yapi.yapi with generated UUID: 2404eaac-6f42-47d7-bc3d-981789245548
+2020-11-17T17:43:10.881+0800 I NETWORK  [conn4] end connection 127.0.0.1:51556 (1 connection now open)
+2020-11-17T17:43:10.928+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:51558 #5 (2 connections now open)
+2020-11-17T17:43:10.931+0800 I NETWORK  [conn5] received client metadata from 127.0.0.1:51558 conn5: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-11-17T17:43:10.960+0800 I NETWORK  [conn5] end connection 127.0.0.1:51558 (1 connection now open)
+2020-11-17T17:43:11.092+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:51562 #6 (2 connections now open)
+2020-11-17T17:43:11.092+0800 I NETWORK  [conn6] received client metadata from 127.0.0.1:51562 conn6: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-11-17T17:43:11.100+0800 I NETWORK  [conn6] end connection 127.0.0.1:51562 (1 connection now open)
+2020-11-17T17:43:56.556+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:51604 #7 (2 connections now open)
+2020-11-17T17:43:56.557+0800 I NETWORK  [conn7] received client metadata from 127.0.0.1:51604 conn7: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-11-17T17:43:56.564+0800 I NETWORK  [conn7] end connection 127.0.0.1:51604 (1 connection now open)
+2020-11-17T17:44:11.220+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:51622 #8 (2 connections now open)
+2020-11-17T17:44:11.220+0800 I NETWORK  [conn8] received client metadata from 127.0.0.1:51622 conn8: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-11-17T17:44:11.230+0800 I NETWORK  [conn8] end connection 127.0.0.1:51622 (1 connection now open)
+2020-11-17T17:48:53.878+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:51888 #9 (2 connections now open)
+2020-11-17T17:48:53.878+0800 I NETWORK  [conn9] received client metadata from 127.0.0.1:51888 conn9: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-11-17T17:48:53.886+0800 I NETWORK  [conn9] end connection 127.0.0.1:51888 (1 connection now open)
+2020-11-17T17:51:07.672+0800 I NETWORK  [conn1] end connection 127.0.0.1:51360 (0 connections now open)
+2020-11-17T17:51:55.129+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:52066 #10 (1 connection now open)
+2020-11-17T17:51:55.130+0800 I NETWORK  [conn10] received client metadata from 127.0.0.1:52066 conn10: { driver: { name: "nodejs", version: "2.2.34" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v14.15.0, LE, mongodb-core: 2.1.18" }
+2020-11-17T17:52:39.771+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:52280 #11 (2 connections now open)
+2020-11-17T17:52:39.776+0800 I NETWORK  [conn10] end connection 127.0.0.1:52066 (1 connection now open)
+2020-11-17T17:52:39.804+0800 I NETWORK  [conn11] received client metadata from 127.0.0.1:52280 conn11: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v14.15.0, LE" }
+2020-11-17T17:52:39.825+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:52282 #12 (2 connections now open)
+2020-11-17T17:52:40.037+0800 I NETWORK  [conn12] received client metadata from 127.0.0.1:52282 conn12: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v14.15.0, LE" }
+2020-11-17T17:52:40.039+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:52284 #13 (3 connections now open)
+2020-11-17T17:52:40.039+0800 I NETWORK  [conn13] received client metadata from 127.0.0.1:52284 conn13: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v14.15.0, LE" }
+2020-11-17T17:52:40.040+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:52286 #14 (4 connections now open)
+2020-11-17T17:52:40.040+0800 I STORAGE  [conn12] createCollection: yapi.user with generated UUID: 836cdaf2-0de7-4764-9a46-83df35cde16b
+2020-11-17T17:52:40.057+0800 I NETWORK  [conn14] received client metadata from 127.0.0.1:52286 conn14: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v14.15.0, LE" }
+2020-11-17T17:52:40.059+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:52288 #15 (5 connections now open)
+2020-11-17T17:52:40.070+0800 I NETWORK  [conn15] received client metadata from 127.0.0.1:52288 conn15: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v14.15.0, LE" }
+2020-11-17T17:52:40.119+0800 I INDEX    [conn12] build index on: yapi.user properties: { v: 2, key: { username: 1 }, name: "username_1", ns: "yapi.user" }
+2020-11-17T17:52:40.119+0800 I INDEX    [conn12] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.120+0800 I INDEX    [conn12] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.132+0800 I INDEX    [conn13] build index on: yapi.user properties: { v: 2, unique: true, key: { email: 1 }, name: "email_1", ns: "yapi.user" }
+2020-11-17T17:52:40.132+0800 I INDEX    [conn13] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.133+0800 I INDEX    [conn13] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.133+0800 I STORAGE  [conn11] createCollection: yapi.project with generated UUID: ee820756-bfcd-4b06-8ecf-9e3233f68026
+2020-11-17T17:52:40.158+0800 I INDEX    [conn11] build index on: yapi.project properties: { v: 2, key: { name: 1 }, name: "name_1", ns: "yapi.project" }
+2020-11-17T17:52:40.158+0800 I INDEX    [conn11] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.159+0800 I INDEX    [conn11] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.159+0800 I COMMAND  [conn11] command yapi.$cmd command: createIndexes { createIndexes: "project", indexes: [ { name: "name_1", key: { name: 1 } } ], lsid: { id: UUID("444a961e-1741-4edf-a5e9-d2e6017b94bc") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 61366, W: 12816 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 100ms
+2020-11-17T17:52:40.169+0800 I INDEX    [conn14] build index on: yapi.project properties: { v: 2, key: { uid: 1 }, name: "uid_1", ns: "yapi.project" }
+2020-11-17T17:52:40.169+0800 I INDEX    [conn14] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.170+0800 I INDEX    [conn14] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.187+0800 I INDEX    [conn15] build index on: yapi.project properties: { v: 2, key: { group_id: 1 }, name: "group_id_1", ns: "yapi.project" }
+2020-11-17T17:52:40.187+0800 I INDEX    [conn15] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.188+0800 I INDEX    [conn15] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.188+0800 I COMMAND  [conn15] command yapi.$cmd command: createIndexes { createIndexes: "project", indexes: [ { name: "group_id_1", key: { group_id: 1 } } ], lsid: { id: UUID("4e0a5cad-adb9-4cf8-af45-6e63538a841e") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 40045, W: 50084 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 108ms
+2020-11-17T17:52:40.189+0800 I STORAGE  [conn13] createCollection: yapi.log with generated UUID: c3b0df79-1f9b-4fb4-a09e-44b47af56899
+2020-11-17T17:52:40.235+0800 I INDEX    [conn13] build index on: yapi.log properties: { v: 2, key: { typeid: 1, type: 1 }, name: "typeid_1_type_1", ns: "yapi.log" }
+2020-11-17T17:52:40.235+0800 I INDEX    [conn13] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.236+0800 I INDEX    [conn13] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.236+0800 I COMMAND  [conn13] command yapi.$cmd command: createIndexes { createIndexes: "log", indexes: [ { name: "typeid_1_type_1", key: { typeid: 1, type: 1 } } ], lsid: { id: UUID("82a0c73d-d3db-4214-bc41-0824b5c8b5b4") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 54905, W: 364 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 102ms
+2020-11-17T17:52:40.254+0800 I INDEX    [conn12] build index on: yapi.log properties: { v: 2, key: { uid: 1 }, name: "uid_1", ns: "yapi.log" }
+2020-11-17T17:52:40.254+0800 I INDEX    [conn12] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.255+0800 I INDEX    [conn12] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.255+0800 I COMMAND  [conn12] command yapi.$cmd command: createIndexes { createIndexes: "log", indexes: [ { name: "uid_1", key: { uid: 1 } } ], lsid: { id: UUID("421a15cb-c578-4c1a-8d36-395b0634b293") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 67878, W: 47333 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 133ms
+2020-11-17T17:52:40.255+0800 I STORAGE  [conn14] createCollection: yapi.interface_col with generated UUID: 792ce315-8a33-4718-a73f-12af3abf9581
+2020-11-17T17:52:40.289+0800 I INDEX    [conn14] build index on: yapi.interface_col properties: { v: 2, key: { uid: 1 }, name: "uid_1", ns: "yapi.interface_col" }
+2020-11-17T17:52:40.289+0800 I INDEX    [conn14] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.290+0800 I INDEX    [conn14] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.290+0800 I COMMAND  [conn14] command yapi.$cmd command: createIndexes { createIndexes: "interface_col", indexes: [ { name: "uid_1", key: { uid: 1 } } ], lsid: { id: UUID("073dda49-8c0a-4a06-a8b1-b6a44249581f") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 16527, W: 65976 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 117ms
+2020-11-17T17:52:40.290+0800 I STORAGE  [conn11] createCollection: yapi.interface_cat with generated UUID: 1be054cb-17e6-4457-a9a1-ac7ec4dcaaec
+2020-11-17T17:52:40.330+0800 I INDEX    [conn11] build index on: yapi.interface_cat properties: { v: 2, key: { uid: 1 }, name: "uid_1", ns: "yapi.interface_cat" }
+2020-11-17T17:52:40.330+0800 I INDEX    [conn11] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.331+0800 I INDEX    [conn11] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.331+0800 I COMMAND  [conn11] command yapi.$cmd command: createIndexes { createIndexes: "interface_cat", indexes: [ { name: "uid_1", key: { uid: 1 } } ], lsid: { id: UUID("421e84cb-168b-41eb-885c-b6184601268e") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 28842, W: 100986 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 170ms
+2020-11-17T17:52:40.342+0800 I INDEX    [conn15] build index on: yapi.interface_col properties: { v: 2, key: { project_id: 1 }, name: "project_id_1", ns: "yapi.interface_col" }
+2020-11-17T17:52:40.342+0800 I INDEX    [conn15] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.343+0800 I INDEX    [conn15] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.343+0800 I COMMAND  [conn15] command yapi.$cmd command: createIndexes { createIndexes: "interface_col", indexes: [ { name: "project_id_1", key: { project_id: 1 } } ], lsid: { id: UUID("9748a05f-e397-435e-8d5e-6df35a4678c7") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 141931, W: 410 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 153ms
+2020-11-17T17:52:40.343+0800 I STORAGE  [conn13] createCollection: yapi.interface_case with generated UUID: ebc1d801-996d-4f1b-9bc8-27639acfe1d7
+2020-11-17T17:52:40.388+0800 I INDEX    [conn13] build index on: yapi.interface_case properties: { v: 2, key: { uid: 1 }, name: "uid_1", ns: "yapi.interface_case" }
+2020-11-17T17:52:40.388+0800 I INDEX    [conn13] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.388+0800 I INDEX    [conn13] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.389+0800 I COMMAND  [conn13] command yapi.$cmd command: createIndexes { createIndexes: "interface_case", indexes: [ { name: "uid_1", key: { uid: 1 } } ], lsid: { id: UUID("9b77a3d0-ec27-4c97-97f6-1c15602e083a") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 93992, W: 12014 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 151ms
+2020-11-17T17:52:40.398+0800 I INDEX    [conn12] build index on: yapi.interface_cat properties: { v: 2, key: { project_id: 1 }, name: "project_id_1", ns: "yapi.interface_cat" }
+2020-11-17T17:52:40.398+0800 I INDEX    [conn12] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.399+0800 I INDEX    [conn12] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.399+0800 I COMMAND  [conn12] command yapi.$cmd command: createIndexes { createIndexes: "interface_cat", indexes: [ { name: "project_id_1", key: { project_id: 1 } } ], lsid: { id: UUID("c9b3c197-06b7-45f8-a76a-fee9ab389f6b") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 75670, W: 57472 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 143ms
+2020-11-17T17:52:40.411+0800 I INDEX    [conn14] build index on: yapi.interface_case properties: { v: 2, key: { col_id: 1 }, name: "col_id_1", ns: "yapi.interface_case" }
+2020-11-17T17:52:40.411+0800 I INDEX    [conn14] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.412+0800 I INDEX    [conn14] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.412+0800 I COMMAND  [conn14] command yapi.$cmd command: createIndexes { createIndexes: "interface_case", indexes: [ { name: "col_id_1", key: { col_id: 1 } } ], lsid: { id: UUID("9e01fc55-8d56-407e-b8d4-ff87901d4e1c") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 41076, W: 68014 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 121ms
+2020-11-17T17:52:40.421+0800 I INDEX    [conn15] build index on: yapi.interface_case properties: { v: 2, key: { project_id: 1 }, name: "project_id_1", ns: "yapi.interface_case" }
+2020-11-17T17:52:40.422+0800 I INDEX    [conn15] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.422+0800 I INDEX    [conn15] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.423+0800 I STORAGE  [conn11] createCollection: yapi.interface with generated UUID: 4a05ff2b-4a88-496d-9af9-a137167752c5
+2020-11-17T17:52:40.449+0800 I INDEX    [conn11] build index on: yapi.interface properties: { v: 2, key: { uid: 1 }, name: "uid_1", ns: "yapi.interface" }
+2020-11-17T17:52:40.450+0800 I INDEX    [conn11] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.450+0800 I INDEX    [conn11] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.450+0800 I COMMAND  [conn11] command yapi.$cmd command: createIndexes { createIndexes: "interface", indexes: [ { name: "uid_1", key: { uid: 1 } } ], lsid: { id: UUID("a12d0017-5e4b-4808-996c-66aded231c49") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 80437, W: 10073 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 118ms
+2020-11-17T17:52:40.461+0800 I INDEX    [conn12] build index on: yapi.interface properties: { v: 2, key: { path: 1, method: 1 }, name: "path_1_method_1", ns: "yapi.interface" }
+2020-11-17T17:52:40.461+0800 I INDEX    [conn12] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.462+0800 I INDEX    [conn12] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.471+0800 I INDEX    [conn13] build index on: yapi.interface properties: { v: 2, key: { project_id: 1 }, name: "project_id_1", ns: "yapi.interface" }
+2020-11-17T17:52:40.471+0800 I INDEX    [conn13] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.472+0800 I INDEX    [conn13] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.472+0800 I STORAGE  [conn14] createCollection: yapi.group with generated UUID: bf3cf1e0-1d92-425d-8f1f-fa3e1eebc01a
+2020-11-17T17:52:40.499+0800 I INDEX    [conn14] build index on: yapi.group properties: { v: 2, key: { uid: 1 }, name: "uid_1", ns: "yapi.group" }
+2020-11-17T17:52:40.499+0800 I INDEX    [conn14] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.499+0800 I INDEX    [conn14] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.509+0800 I INDEX    [conn15] build index on: yapi.group properties: { v: 2, key: { group_name: 1 }, name: "group_name_1", ns: "yapi.group" }
+2020-11-17T17:52:40.509+0800 I INDEX    [conn15] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.510+0800 I INDEX    [conn15] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.510+0800 I STORAGE  [conn12] createCollection: yapi.token with generated UUID: 89ee412f-a55c-440f-991b-b8db8602cdb1
+2020-11-17T17:52:40.537+0800 I INDEX    [conn12] build index on: yapi.token properties: { v: 2, key: { project_id: 1 }, name: "project_id_1", ns: "yapi.token" }
+2020-11-17T17:52:40.537+0800 I INDEX    [conn12] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.537+0800 I INDEX    [conn12] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.538+0800 I STORAGE  [conn11] createCollection: yapi.avatar with generated UUID: 5114afd3-5e50-43ab-82e2-023fc9de98f1
+2020-11-17T17:52:40.571+0800 I INDEX    [conn11] build index on: yapi.avatar properties: { v: 2, key: { uid: 1 }, name: "uid_1", ns: "yapi.avatar" }
+2020-11-17T17:52:40.571+0800 I INDEX    [conn11] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.572+0800 I INDEX    [conn11] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.572+0800 I COMMAND  [conn11] command yapi.$cmd command: createIndexes { createIndexes: "avatar", indexes: [ { name: "uid_1", key: { uid: 1 } } ], lsid: { id: UUID("6e272439-46a2-48b0-9846-fbfe728c670f") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 21276, W: 65233 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 121ms
+2020-11-17T17:52:40.573+0800 I STORAGE  [conn13] createCollection: yapi.follow with generated UUID: ee8d5338-e1c0-4954-b379-aa59564d8e3e
+2020-11-17T17:52:40.599+0800 I INDEX    [conn13] build index on: yapi.follow properties: { v: 2, key: { uid: 1 }, name: "uid_1", ns: "yapi.follow" }
+2020-11-17T17:52:40.599+0800 I INDEX    [conn13] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.600+0800 I INDEX    [conn13] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.600+0800 I COMMAND  [conn13] command yapi.$cmd command: createIndexes { createIndexes: "follow", indexes: [ { name: "uid_1", key: { uid: 1 } } ], lsid: { id: UUID("08bd7c7b-b43d-4a09-a9a2-db7bb912e393") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 99248, W: 39 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 127ms
+2020-11-17T17:52:40.621+0800 I INDEX    [conn14] build index on: yapi.follow properties: { v: 2, key: { project_id: 1 }, name: "project_id_1", ns: "yapi.follow" }
+2020-11-17T17:52:40.621+0800 I INDEX    [conn14] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T17:52:40.622+0800 I INDEX    [conn14] build index done.  scanned 0 total records. 0 secs
+2020-11-17T17:52:40.622+0800 I COMMAND  [conn14] command yapi.$cmd command: createIndexes { createIndexes: "follow", indexes: [ { name: "project_id_1", key: { project_id: 1 } } ], lsid: { id: UUID("a2fbf068-dfaf-45ba-8691-cfb1b5ebc78e") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 72239, W: 27956 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 121ms
+2020-11-17T17:52:40.622+0800 I STORAGE  [conn15] createCollection: yapi.identitycounters with generated UUID: 22cc065e-bf3a-4ef1-ac0d-261b809b48f2
+2020-11-17T17:52:40.638+0800 I COMMAND  [conn15] command yapi.identitycounters command: insert { insert: "identitycounters", documents: [ { count: 3, _id: ObjectId('5fb39d68319322ae163a2f5e'), model: "user", field: "_id", __v: 0 } ], ordered: true, lsid: { id: UUID("f37049d2-0db9-4fbc-aade-9c7bb98e52ab") }, $db: "yapi" } ninserted:1 keysInserted:1 numYields:0 reslen:45 locks:{ Global: { acquireCount: { r: 3, w: 3 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 61945, W: 49620 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 127ms
+2020-11-17T17:52:40.655+0800 I NETWORK  [conn12] end connection 127.0.0.1:52282 (4 connections now open)
+2020-11-17T17:52:40.656+0800 I NETWORK  [conn14] end connection 127.0.0.1:52286 (3 connections now open)
+2020-11-17T17:52:40.657+0800 I NETWORK  [conn15] end connection 127.0.0.1:52288 (2 connections now open)
+2020-11-17T17:52:40.660+0800 I NETWORK  [conn13] end connection 127.0.0.1:52284 (1 connection now open)
+2020-11-17T17:52:40.660+0800 I NETWORK  [conn11] end connection 127.0.0.1:52280 (0 connections now open)
+2020-11-17T18:06:49.856+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:53140 #16 (1 connection now open)
+2020-11-17T18:06:49.856+0800 I NETWORK  [conn16] received client metadata from 127.0.0.1:53140 conn16: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-11-17T18:06:49.864+0800 I NETWORK  [conn16] end connection 127.0.0.1:53140 (0 connections now open)
+2020-11-17T18:06:55.709+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:53146 #17 (1 connection now open)
+2020-11-17T18:06:55.710+0800 I NETWORK  [conn17] received client metadata from 127.0.0.1:53146 conn17: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-11-17T18:06:55.711+0800 I COMMAND  [conn17] dropDatabase yapi - starting
+2020-11-17T18:06:55.711+0800 I COMMAND  [conn17] dropDatabase yapi - dropping 0 collections
+2020-11-17T18:06:55.797+0800 I COMMAND  [conn17] dropDatabase yapi - finished
+2020-11-17T18:06:55.805+0800 I NETWORK  [conn17] end connection 127.0.0.1:53146 (0 connections now open)
+2020-11-17T18:06:55.932+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:53148 #18 (1 connection now open)
+2020-11-17T18:06:55.933+0800 I NETWORK  [conn18] received client metadata from 127.0.0.1:53148 conn18: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-11-17T18:06:55.941+0800 I NETWORK  [conn18] end connection 127.0.0.1:53148 (0 connections now open)
+2020-11-17T18:07:00.537+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:53156 #19 (1 connection now open)
+2020-11-17T18:07:00.537+0800 I NETWORK  [conn19] received client metadata from 127.0.0.1:53156 conn19: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-11-17T18:07:00.539+0800 I STORAGE  [conn19] createCollection: yapi.yapi with generated UUID: 9a8c4c12-5298-46bb-a4e3-071f9966c8b2
+2020-11-17T18:07:00.571+0800 I NETWORK  [conn19] end connection 127.0.0.1:53156 (0 connections now open)
+2020-11-17T18:07:00.618+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:53158 #20 (1 connection now open)
+2020-11-17T18:07:00.618+0800 I NETWORK  [conn20] received client metadata from 127.0.0.1:53158 conn20: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-11-17T18:07:00.627+0800 I NETWORK  [conn20] end connection 127.0.0.1:53158 (0 connections now open)
+2020-11-17T18:07:00.757+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:53160 #21 (1 connection now open)
+2020-11-17T18:07:00.757+0800 I NETWORK  [conn21] received client metadata from 127.0.0.1:53160 conn21: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-11-17T18:07:00.765+0800 I NETWORK  [conn21] end connection 127.0.0.1:53160 (0 connections now open)
+2020-11-17T18:08:19.162+0800 I CONTROL  [main] ***** SERVER RESTARTED *****
+2020-11-17T18:08:19.166+0800 I CONTROL  [signalProcessingThread] got signal 15 (Terminated), will terminate after current cmd ends
+2020-11-17T18:08:19.166+0800 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2020-11-17T18:08:19.166+0800 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2020-11-17T18:08:19.166+0800 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2020-11-17T18:08:19.168+0800 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2020-11-17T18:08:19.168+0800 I STORAGE  [signalProcessingThread] Shutting down session sweeper thread
+2020-11-17T18:08:19.168+0800 I STORAGE  [signalProcessingThread] Finished shutting down session sweeper thread
+2020-11-17T18:08:19.248+0800 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2020-11-17T18:08:19.248+0800 I CONTROL  [signalProcessingThread] now exiting
+2020-11-17T18:08:19.248+0800 I CONTROL  [signalProcessingThread] shutting down with code:0
+2020-11-17T18:08:22.209+0800 I CONTROL  [main] ***** SERVER RESTARTED *****
+2020-11-17T18:08:22.215+0800 I CONTROL  [initandlisten] MongoDB starting : pid=444064 port=26859 dbpath=/www/server/mongodb/data 64-bit host=VM-0-14-centos
+2020-11-17T18:08:22.215+0800 I CONTROL  [initandlisten] db version v4.0.10
+2020-11-17T18:08:22.215+0800 I CONTROL  [initandlisten] git version: c389e7f69f637f7a1ac3cc9fae843b635f20b766
+2020-11-17T18:08:22.215+0800 I CONTROL  [initandlisten] allocator: tcmalloc
+2020-11-17T18:08:22.215+0800 I CONTROL  [initandlisten] modules: none
+2020-11-17T18:08:22.215+0800 I CONTROL  [initandlisten] build environment:
+2020-11-17T18:08:22.215+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2020-11-17T18:08:22.215+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2020-11-17T18:08:22.215+0800 I CONTROL  [initandlisten] options: { config: "/www/server/mongodb/config.conf", net: { bindIp: "127.0.0.1", port: 26859 }, processManagement: { fork: true, pidFilePath: "/www/server/mongodb/log/configsvr.pid" }, security: { authorization: "disabled", javascriptEnabled: false }, storage: { dbPath: "/www/server/mongodb/data", directoryPerDB: true, journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/www/server/mongodb/log/config.log" } }
+2020-11-17T18:08:22.216+0800 I STORAGE  [initandlisten] Detected data files in /www/server/mongodb/data created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-11-17T18:08:22.216+0800 I STORAGE  [initandlisten] 
+2020-11-17T18:08:22.216+0800 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-11-17T18:08:22.216+0800 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-11-17T18:08:22.216+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=402M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2020-11-17T18:08:22.923+0800 I STORAGE  [initandlisten] WiredTiger message [1605607702:923459][444064:0x7f6d014e9a40], txn-recover: Main recovery loop: starting at 1/378240 to 2/256
+2020-11-17T18:08:23.015+0800 I STORAGE  [initandlisten] WiredTiger message [1605607703:15640][444064:0x7f6d014e9a40], txn-recover: Recovering log 1 through 2
+2020-11-17T18:08:23.073+0800 I STORAGE  [initandlisten] WiredTiger message [1605607703:73192][444064:0x7f6d014e9a40], txn-recover: Recovering log 2 through 2
+2020-11-17T18:08:23.120+0800 I STORAGE  [initandlisten] WiredTiger message [1605607703:120064][444064:0x7f6d014e9a40], txn-recover: Set global recovery timestamp: 0
+2020-11-17T18:08:23.147+0800 I RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-11-17T18:08:23.160+0800 I CONTROL  [initandlisten] 
+2020-11-17T18:08:23.160+0800 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2020-11-17T18:08:23.160+0800 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2020-11-17T18:08:23.160+0800 I CONTROL  [initandlisten] 
+2020-11-17T18:08:23.160+0800 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. rlimits set to 7211 processes, 100001 files. Number of processes should be at least 50000.5 : 0.5 times number of files.
+2020-11-17T18:08:23.160+0800 I CONTROL  [initandlisten] 
+2020-11-17T18:08:23.171+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/www/server/mongodb/data/diagnostic.data'
+2020-11-17T18:08:23.171+0800 I NETWORK  [initandlisten] waiting for connections on port 26859
+2020-11-17T18:08:33.943+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:59864 #1 (1 connection now open)
+2020-11-17T18:08:33.947+0800 I NETWORK  [conn1] received client metadata from 127.0.0.1:59864 conn1: { driver: { name: "nodejs", version: "2.2.34" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE, mongodb-core: 2.1.18" }
+2020-11-17T18:09:05.903+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:59940 #2 (2 connections now open)
+2020-11-17T18:09:05.913+0800 I NETWORK  [conn2] received client metadata from 127.0.0.1:59940 conn2: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:09:05.937+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:59942 #3 (3 connections now open)
+2020-11-17T18:09:05.978+0800 I NETWORK  [conn3] received client metadata from 127.0.0.1:59942 conn3: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:09:05.998+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:59944 #4 (4 connections now open)
+2020-11-17T18:09:05.999+0800 I STORAGE  [conn3] createCollection: yapi.user with generated UUID: 7be524c1-15a2-4b33-a625-867137051a9e
+2020-11-17T18:09:06.008+0800 I NETWORK  [conn4] received client metadata from 127.0.0.1:59944 conn4: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:09:06.021+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:59946 #5 (5 connections now open)
+2020-11-17T18:09:06.021+0800 I NETWORK  [conn5] received client metadata from 127.0.0.1:59946 conn5: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:09:06.022+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:59948 #6 (6 connections now open)
+2020-11-17T18:09:06.025+0800 I NETWORK  [conn6] received client metadata from 127.0.0.1:59948 conn6: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:09:06.072+0800 I INDEX    [conn3] build index on: yapi.user properties: { v: 2, key: { username: 1 }, name: "username_1", ns: "yapi.user" }
+2020-11-17T18:09:06.072+0800 I INDEX    [conn3] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.073+0800 I INDEX    [conn3] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.074+0800 I STORAGE  [conn2] createCollection: yapi.project with generated UUID: bd15c522-74aa-4a1a-bf5e-c63853d6e8d8
+2020-11-17T18:09:06.125+0800 I INDEX    [conn2] build index on: yapi.project properties: { v: 2, key: { uid: 1 }, name: "uid_1", ns: "yapi.project" }
+2020-11-17T18:09:06.125+0800 I INDEX    [conn2] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.126+0800 I INDEX    [conn2] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.126+0800 I COMMAND  [conn2] command yapi.$cmd command: createIndexes { createIndexes: "project", indexes: [ { name: "uid_1", key: { uid: 1 } } ], lsid: { id: UUID("17dae223-0105-42e8-a321-506b3d19974b") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 52871, W: 56 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 105ms
+2020-11-17T18:09:06.142+0800 I INDEX    [conn4] build index on: yapi.user properties: { v: 2, unique: true, key: { email: 1 }, name: "email_1", ns: "yapi.user" }
+2020-11-17T18:09:06.142+0800 I INDEX    [conn4] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.143+0800 I INDEX    [conn4] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.143+0800 I COMMAND  [conn4] command yapi.$cmd command: createIndexes { createIndexes: "user", indexes: [ { name: "email_1", key: { email: 1 }, unique: true } ], lsid: { id: UUID("471915b0-b2a9-475c-80ff-f2b709c62863") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 52402, W: 52403 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 121ms
+2020-11-17T18:09:06.156+0800 I INDEX    [conn5] build index on: yapi.project properties: { v: 2, key: { name: 1 }, name: "name_1", ns: "yapi.project" }
+2020-11-17T18:09:06.156+0800 I INDEX    [conn5] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.157+0800 I INDEX    [conn5] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.157+0800 I COMMAND  [conn5] command yapi.$cmd command: createIndexes { createIndexes: "project", indexes: [ { name: "name_1", key: { name: 1 } } ], lsid: { id: UUID("83ca4881-9567-4cd5-9491-390623fe6e9a") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 47999, W: 69483 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 130ms
+2020-11-17T18:09:06.167+0800 I INDEX    [conn6] build index on: yapi.project properties: { v: 2, key: { group_id: 1 }, name: "group_id_1", ns: "yapi.project" }
+2020-11-17T18:09:06.167+0800 I INDEX    [conn6] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.168+0800 I INDEX    [conn6] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.168+0800 I COMMAND  [conn6] command yapi.$cmd command: createIndexes { createIndexes: "project", indexes: [ { name: "group_id_1", key: { group_id: 1 } } ], lsid: { id: UUID("1b77d53f-a439-486e-b69d-c7dd4d5fdd37") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 46273, W: 83108 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 140ms
+2020-11-17T18:09:06.169+0800 I STORAGE  [conn3] createCollection: yapi.log with generated UUID: f49b3486-47ce-45d4-b812-5ca4bd00187c
+2020-11-17T18:09:06.198+0800 I INDEX    [conn3] build index on: yapi.log properties: { v: 2, key: { uid: 1 }, name: "uid_1", ns: "yapi.log" }
+2020-11-17T18:09:06.198+0800 I INDEX    [conn3] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.198+0800 I INDEX    [conn3] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.199+0800 I COMMAND  [conn3] command yapi.$cmd command: createIndexes { createIndexes: "log", indexes: [ { name: "uid_1", key: { uid: 1 } } ], lsid: { id: UUID("a1eed4ef-afb6-45d3-96ad-f080802a9a94") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 91194, W: 316 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 121ms
+2020-11-17T18:09:06.199+0800 I STORAGE  [conn2] createCollection: yapi.interface_cat with generated UUID: a05cb0cd-c428-4ebf-b113-f07ac3ef8e5e
+2020-11-17T18:09:06.233+0800 I INDEX    [conn2] build index on: yapi.interface_cat properties: { v: 2, key: { uid: 1 }, name: "uid_1", ns: "yapi.interface_cat" }
+2020-11-17T18:09:06.233+0800 I INDEX    [conn2] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.234+0800 I INDEX    [conn2] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.235+0800 I COMMAND  [conn2] command yapi.$cmd command: createIndexes { createIndexes: "interface_cat", indexes: [ { name: "uid_1", key: { uid: 1 } } ], lsid: { id: UUID("b0f48a3d-43fb-4809-8f84-4bbbb8ae8b70") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 38895, W: 30229 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 104ms
+2020-11-17T18:09:06.245+0800 I INDEX    [conn4] build index on: yapi.log properties: { v: 2, key: { typeid: 1, type: 1 }, name: "typeid_1_type_1", ns: "yapi.log" }
+2020-11-17T18:09:06.245+0800 I INDEX    [conn4] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.246+0800 I INDEX    [conn4] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.246+0800 I COMMAND  [conn4] command yapi.$cmd command: createIndexes { createIndexes: "log", indexes: [ { name: "typeid_1_type_1", key: { typeid: 1, type: 1 } } ], lsid: { id: UUID("fbe8f004-a0b9-45f7-b72c-f933d7587c23") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 24568, W: 66129 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 102ms
+2020-11-17T18:09:06.246+0800 I STORAGE  [conn5] createCollection: yapi.interface_col with generated UUID: f69e3da1-81c3-4f4b-99de-244de4f16905
+2020-11-17T18:09:06.287+0800 I INDEX    [conn5] build index on: yapi.interface_col properties: { v: 2, key: { uid: 1 }, name: "uid_1", ns: "yapi.interface_col" }
+2020-11-17T18:09:06.287+0800 I INDEX    [conn5] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.288+0800 I INDEX    [conn5] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.288+0800 I COMMAND  [conn5] command yapi.$cmd command: createIndexes { createIndexes: "interface_col", indexes: [ { name: "uid_1", key: { uid: 1 } } ], lsid: { id: UUID("ca2be776-f585-4ff8-b5e6-470c26aaa691") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 11212, W: 77686 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 130ms
+2020-11-17T18:09:06.300+0800 I INDEX    [conn6] build index on: yapi.interface_col properties: { v: 2, key: { project_id: 1 }, name: "project_id_1", ns: "yapi.interface_col" }
+2020-11-17T18:09:06.300+0800 I INDEX    [conn6] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.301+0800 I INDEX    [conn6] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.301+0800 I COMMAND  [conn6] command yapi.$cmd command: createIndexes { createIndexes: "interface_col", indexes: [ { name: "project_id_1", key: { project_id: 1 } } ], lsid: { id: UUID("67170db6-0ccd-4f41-8f9e-f24cae7f0ac6") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 118949, W: 346 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 131ms
+2020-11-17T18:09:06.312+0800 I INDEX    [conn3] build index on: yapi.interface_cat properties: { v: 2, key: { project_id: 1 }, name: "project_id_1", ns: "yapi.interface_cat" }
+2020-11-17T18:09:06.312+0800 I INDEX    [conn3] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.313+0800 I INDEX    [conn3] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.313+0800 I COMMAND  [conn3] command yapi.$cmd command: createIndexes { createIndexes: "interface_cat", indexes: [ { name: "project_id_1", key: { project_id: 1 } } ], lsid: { id: UUID("3ae55c16-6528-430b-9ed3-28dd6983e4e1") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 88768, W: 12841 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 113ms
+2020-11-17T18:09:06.313+0800 I STORAGE  [conn4] createCollection: yapi.interface_case with generated UUID: 869e97bf-9508-4383-8e40-403e14614ebe
+2020-11-17T18:09:06.343+0800 I INDEX    [conn4] build index on: yapi.interface_case properties: { v: 2, key: { uid: 1 }, name: "uid_1", ns: "yapi.interface_case" }
+2020-11-17T18:09:06.343+0800 I INDEX    [conn4] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.344+0800 I INDEX    [conn4] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.344+0800 I STORAGE  [conn2] createCollection: yapi.interface with generated UUID: 0f921836-5494-464a-9fa9-c35d52424f06
+2020-11-17T18:09:06.384+0800 I INDEX    [conn2] build index on: yapi.interface properties: { v: 2, key: { uid: 1 }, name: "uid_1", ns: "yapi.interface" }
+2020-11-17T18:09:06.384+0800 I INDEX    [conn2] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.385+0800 I INDEX    [conn2] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.385+0800 I COMMAND  [conn2] command yapi.$cmd command: createIndexes { createIndexes: "interface", indexes: [ { name: "uid_1", key: { uid: 1 } } ], lsid: { id: UUID("c871b936-d5ea-4afa-8426-4aec8e8c936c") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 53096, W: 55741 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 149ms
+2020-11-17T18:09:06.398+0800 I INDEX    [conn5] build index on: yapi.interface_case properties: { v: 2, key: { col_id: 1 }, name: "col_id_1", ns: "yapi.interface_case" }
+2020-11-17T18:09:06.399+0800 I INDEX    [conn5] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.400+0800 I INDEX    [conn5] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.400+0800 I COMMAND  [conn5] command yapi.$cmd command: createIndexes { createIndexes: "interface_case", indexes: [ { name: "col_id_1", key: { col_id: 1 } } ], lsid: { id: UUID("a622112a-5de2-492d-9abb-1559dbd62153") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 96522, W: 87 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 111ms
+2020-11-17T18:09:06.437+0800 I INDEX    [conn6] build index on: yapi.interface_case properties: { v: 2, key: { project_id: 1 }, name: "project_id_1", ns: "yapi.interface_case" }
+2020-11-17T18:09:06.437+0800 I INDEX    [conn6] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.448+0800 I INDEX    [conn6] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.448+0800 I COMMAND  [conn6] command yapi.$cmd command: createIndexes { createIndexes: "interface_case", indexes: [ { name: "project_id_1", key: { project_id: 1 } } ], lsid: { id: UUID("7eb4e300-9ea7-4768-b4da-4826d1fcd03f") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 83766, W: 14871 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 146ms
+2020-11-17T18:09:06.489+0800 I INDEX    [conn3] build index on: yapi.interface properties: { v: 2, key: { path: 1, method: 1 }, name: "path_1_method_1", ns: "yapi.interface" }
+2020-11-17T18:09:06.489+0800 I INDEX    [conn3] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.491+0800 I INDEX    [conn3] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.491+0800 I COMMAND  [conn3] command yapi.$cmd command: createIndexes { createIndexes: "interface", indexes: [ { name: "path_1_method_1", key: { path: 1, method: 1 } } ], lsid: { id: UUID("d96d3db5-399e-42da-84c6-ab95cd2e6b40") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 72105, W: 63526 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 177ms
+2020-11-17T18:09:06.503+0800 I INDEX    [conn4] build index on: yapi.interface properties: { v: 2, key: { project_id: 1 }, name: "project_id_1", ns: "yapi.interface" }
+2020-11-17T18:09:06.503+0800 I INDEX    [conn4] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.504+0800 I INDEX    [conn4] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.504+0800 I COMMAND  [conn4] command yapi.$cmd command: createIndexes { createIndexes: "interface", indexes: [ { name: "project_id_1", key: { project_id: 1 } } ], lsid: { id: UUID("76379c72-2c8a-4a8c-bfc4-beb456414a29") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 40600, W: 105333 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 159ms
+2020-11-17T18:09:06.505+0800 I STORAGE  [conn2] createCollection: yapi.avatar with generated UUID: 6d377484-8d1e-462b-928e-7b811261bb09
+2020-11-17T18:09:06.537+0800 I INDEX    [conn2] build index on: yapi.avatar properties: { v: 2, key: { uid: 1 }, name: "uid_1", ns: "yapi.avatar" }
+2020-11-17T18:09:06.537+0800 I INDEX    [conn2] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.538+0800 I INDEX    [conn2] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.538+0800 I COMMAND  [conn2] command yapi.$cmd command: createIndexes { createIndexes: "avatar", indexes: [ { name: "uid_1", key: { uid: 1 } } ], lsid: { id: UUID("e76f0d57-003d-47f0-81f6-8060b2b52b51") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 118242, W: 351 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 151ms
+2020-11-17T18:09:06.539+0800 I STORAGE  [conn5] createCollection: yapi.group with generated UUID: 25670132-2d73-4432-a0e2-c609961ee1e5
+2020-11-17T18:09:06.569+0800 I INDEX    [conn5] build index on: yapi.group properties: { v: 2, key: { uid: 1 }, name: "uid_1", ns: "yapi.group" }
+2020-11-17T18:09:06.569+0800 I INDEX    [conn5] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.570+0800 I INDEX    [conn5] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.570+0800 I COMMAND  [conn5] command yapi.$cmd command: createIndexes { createIndexes: "group", indexes: [ { name: "uid_1", key: { uid: 1 } } ], lsid: { id: UUID("5978ad24-63e8-4d32-96bc-e46d735f3995") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 95085, W: 34242 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 160ms
+2020-11-17T18:09:06.583+0800 I INDEX    [conn6] build index on: yapi.group properties: { v: 2, key: { group_name: 1 }, name: "group_name_1", ns: "yapi.group" }
+2020-11-17T18:09:06.583+0800 I INDEX    [conn6] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.584+0800 I INDEX    [conn6] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.584+0800 I COMMAND  [conn6] command yapi.$cmd command: createIndexes { createIndexes: "group", indexes: [ { name: "group_name_1", key: { group_name: 1 } } ], lsid: { id: UUID("77ca56ab-db1a-411b-ac3d-7568194d5c75") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 50224, W: 65848 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 129ms
+2020-11-17T18:09:06.584+0800 I STORAGE  [conn3] createCollection: yapi.token with generated UUID: f176008d-3262-4bf7-b52c-20bbbddde82a
+2020-11-17T18:09:06.615+0800 I INDEX    [conn3] build index on: yapi.token properties: { v: 2, key: { project_id: 1 }, name: "project_id_1", ns: "yapi.token" }
+2020-11-17T18:09:06.615+0800 I INDEX    [conn3] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.616+0800 I INDEX    [conn3] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.616+0800 I COMMAND  [conn3] command yapi.$cmd command: createIndexes { createIndexes: "token", indexes: [ { name: "project_id_1", key: { project_id: 1 } } ], lsid: { id: UUID("56df00fd-92a2-407f-8f30-296469c084f1") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 12908, W: 79168 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 124ms
+2020-11-17T18:09:06.617+0800 I STORAGE  [conn4] createCollection: yapi.follow with generated UUID: 3aad0954-5ca4-4de3-94d6-c078bdbb0081
+2020-11-17T18:09:06.647+0800 I INDEX    [conn4] build index on: yapi.follow properties: { v: 2, key: { uid: 1 }, name: "uid_1", ns: "yapi.follow" }
+2020-11-17T18:09:06.647+0800 I INDEX    [conn4] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.648+0800 I INDEX    [conn4] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.648+0800 I COMMAND  [conn4] command yapi.$cmd command: createIndexes { createIndexes: "follow", indexes: [ { name: "uid_1", key: { uid: 1 } } ], lsid: { id: UUID("5198847f-612c-49fa-930d-b3037444fb82") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 111121, W: 371 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 142ms
+2020-11-17T18:09:06.648+0800 I STORAGE  [conn6] createCollection: yapi.identitycounters with generated UUID: d7579b72-5a3c-40e2-8dd3-ec56483388d1
+2020-11-17T18:09:06.683+0800 I INDEX    [conn5] build index on: yapi.follow properties: { v: 2, key: { project_id: 1 }, name: "project_id_1", ns: "yapi.follow" }
+2020-11-17T18:09:06.683+0800 I INDEX    [conn5] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:09:06.684+0800 I INDEX    [conn5] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:09:06.684+0800 I COMMAND  [conn5] command yapi.$cmd command: createIndexes { createIndexes: "follow", indexes: [ { name: "project_id_1", key: { project_id: 1 } } ], lsid: { id: UUID("af60d48f-f311-4893-884d-a90e1b30c80a") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 45922, W: 55814 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 113ms
+2020-11-17T18:09:06.685+0800 I COMMAND  [conn6] command yapi.identitycounters command: insert { insert: "identitycounters", documents: [ { count: 5, _id: ObjectId('5fb3a14220c1bcc797d5f15f'), model: "user", field: "_id", __v: 0 } ], ordered: true, lsid: { id: UUID("2b110c89-9c5f-497b-9572-b694ba2d6d6d") }, $db: "yapi" } ninserted:1 keysInserted:1 numYields:0 reslen:45 locks:{ Global: { acquireCount: { r: 3, w: 3 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 2, W: 1 }, timeAcquiringMicros: { w: 44076, W: 31948 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 100ms
+2020-11-17T18:09:06.703+0800 I NETWORK  [conn3] end connection 127.0.0.1:59942 (5 connections now open)
+2020-11-17T18:09:06.703+0800 I NETWORK  [conn2] end connection 127.0.0.1:59940 (4 connections now open)
+2020-11-17T18:09:06.707+0800 I NETWORK  [conn4] end connection 127.0.0.1:59944 (3 connections now open)
+2020-11-17T18:09:06.708+0800 I NETWORK  [conn5] end connection 127.0.0.1:59946 (2 connections now open)
+2020-11-17T18:09:06.719+0800 I NETWORK  [conn1] end connection 127.0.0.1:59864 (1 connection now open)
+2020-11-17T18:09:06.721+0800 I NETWORK  [conn6] end connection 127.0.0.1:59948 (0 connections now open)
+2020-11-17T18:12:01.255+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60118 #7 (1 connection now open)
+2020-11-17T18:12:01.287+0800 I NETWORK  [conn7] received client metadata from 127.0.0.1:60118 conn7: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:12:01.320+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60120 #8 (2 connections now open)
+2020-11-17T18:12:01.348+0800 I NETWORK  [conn8] received client metadata from 127.0.0.1:60120 conn8: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:12:01.371+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60122 #9 (3 connections now open)
+2020-11-17T18:12:01.371+0800 I NETWORK  [conn9] received client metadata from 127.0.0.1:60122 conn9: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:12:01.381+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60124 #10 (4 connections now open)
+2020-11-17T18:12:01.382+0800 I NETWORK  [conn10] received client metadata from 127.0.0.1:60124 conn10: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:12:01.382+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60126 #11 (5 connections now open)
+2020-11-17T18:12:01.385+0800 I NETWORK  [conn11] received client metadata from 127.0.0.1:60126 conn11: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:12:01.396+0800 I STORAGE  [conn9] createCollection: yapi.adv_mock_case with generated UUID: c66e4143-ad8a-4915-858d-8dd9af149442
+2020-11-17T18:12:01.462+0800 I INDEX    [conn9] build index on: yapi.adv_mock_case properties: { v: 2, key: { interface_id: 1 }, name: "interface_id_1", ns: "yapi.adv_mock_case" }
+2020-11-17T18:12:01.462+0800 I INDEX    [conn9] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:12:01.462+0800 I INDEX    [conn9] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:12:01.466+0800 I STORAGE  [conn8] createCollection: yapi.adv_mock with generated UUID: 21e5a460-4814-4623-b720-7e87f3a253e8
+2020-11-17T18:12:01.502+0800 I INDEX    [conn8] build index on: yapi.adv_mock properties: { v: 2, key: { project_id: 1 }, name: "project_id_1", ns: "yapi.adv_mock" }
+2020-11-17T18:12:01.502+0800 I INDEX    [conn8] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:12:01.503+0800 I INDEX    [conn8] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:12:01.503+0800 I COMMAND  [conn8] command yapi.$cmd command: createIndexes { createIndexes: "adv_mock", indexes: [ { name: "project_id_1", key: { project_id: 1 } } ], lsid: { id: UUID("e35251f1-e021-4799-931c-2b8989c210e7") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 65271, W: 3357 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 105ms
+2020-11-17T18:12:01.515+0800 I INDEX    [conn7] build index on: yapi.adv_mock properties: { v: 2, key: { interface_id: 1 }, name: "interface_id_1", ns: "yapi.adv_mock" }
+2020-11-17T18:12:01.515+0800 I INDEX    [conn7] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:12:01.516+0800 I INDEX    [conn7] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:12:01.516+0800 I COMMAND  [conn7] command yapi.$cmd command: createIndexes { createIndexes: "adv_mock", indexes: [ { name: "interface_id_1", key: { interface_id: 1 } } ], lsid: { id: UUID("f05e19bc-1d79-4667-a3db-d7e81c80e762") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 49457, W: 39871 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 102ms
+2020-11-17T18:12:01.538+0800 I INDEX    [conn10] build index on: yapi.adv_mock_case properties: { v: 2, key: { project_id: 1 }, name: "project_id_1", ns: "yapi.adv_mock_case" }
+2020-11-17T18:12:01.538+0800 I INDEX    [conn10] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:12:01.539+0800 I INDEX    [conn10] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:12:01.540+0800 I STORAGE  [conn9] createCollection: yapi.statis_mock with generated UUID: fb63d684-eea8-44c2-8dbf-28bd5793b8a9
+2020-11-17T18:12:01.571+0800 I INDEX    [conn9] build index on: yapi.statis_mock properties: { v: 2, key: { time: 1 }, name: "time_1", ns: "yapi.statis_mock" }
+2020-11-17T18:12:01.571+0800 I INDEX    [conn9] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:12:01.572+0800 I INDEX    [conn9] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:12:01.572+0800 I COMMAND  [conn9] command yapi.$cmd command: createIndexes { createIndexes: "statis_mock", indexes: [ { name: "time_1", key: { time: 1 } } ], lsid: { id: UUID("3251e9bb-0d57-4fef-8950-931107ad88ed") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 52368, W: 20480 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 105ms
+2020-11-17T18:12:01.584+0800 I INDEX    [conn8] build index on: yapi.statis_mock properties: { v: 2, key: { group_id: 1 }, name: "group_id_1", ns: "yapi.statis_mock" }
+2020-11-17T18:12:01.584+0800 I INDEX    [conn8] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:12:01.584+0800 I INDEX    [conn8] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:12:01.600+0800 I INDEX    [conn7] build index on: yapi.statis_mock properties: { v: 2, key: { project_id: 1 }, name: "project_id_1", ns: "yapi.statis_mock" }
+2020-11-17T18:12:01.600+0800 I INDEX    [conn7] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:12:01.601+0800 I INDEX    [conn7] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:12:01.620+0800 I INDEX    [conn11] build index on: yapi.statis_mock properties: { v: 2, key: { interface_id: 1 }, name: "interface_id_1", ns: "yapi.statis_mock" }
+2020-11-17T18:12:01.620+0800 I INDEX    [conn11] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:12:01.621+0800 I INDEX    [conn11] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:12:01.621+0800 I COMMAND  [conn11] command yapi.$cmd command: createIndexes { createIndexes: "statis_mock", indexes: [ { name: "interface_id_1", key: { interface_id: 1 } } ], lsid: { id: UUID("e3cb1a6d-0fb8-42d3-a964-3f0a698984fd") }, $db: "yapi" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 }, acquireWaitCount: { w: 1, W: 1 }, timeAcquiringMicros: { w: 65066, W: 16830 } }, Collection: { acquireCount: { w: 2 } } } storage:{} protocol:op_msg 101ms
+2020-11-17T18:12:01.632+0800 I INDEX    [conn10] build index on: yapi.statis_mock properties: { v: 2, key: { date: 1 }, name: "date_1", ns: "yapi.statis_mock" }
+2020-11-17T18:12:01.632+0800 I INDEX    [conn10] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:12:01.634+0800 I INDEX    [conn10] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:12:01.635+0800 I STORAGE  [conn11] createCollection: yapi.wiki with generated UUID: dface325-0d88-4130-b2bb-fdee10dc147d
+2020-11-17T18:12:01.672+0800 I INDEX    [conn11] build index on: yapi.wiki properties: { v: 2, key: { project_id: 1 }, name: "project_id_1", ns: "yapi.wiki" }
+2020-11-17T18:12:01.672+0800 I INDEX    [conn11] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2020-11-17T18:12:01.673+0800 I INDEX    [conn11] build index done.  scanned 0 total records. 0 secs
+2020-11-17T18:14:56.246+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60290 #12 (6 connections now open)
+2020-11-17T18:14:56.251+0800 I NETWORK  [conn12] end connection 127.0.0.1:60290 (5 connections now open)
+2020-11-17T18:15:46.529+0800 I NETWORK  [conn11] end connection 127.0.0.1:60126 (4 connections now open)
+2020-11-17T18:15:46.529+0800 I NETWORK  [conn10] end connection 127.0.0.1:60124 (3 connections now open)
+2020-11-17T18:15:46.529+0800 I NETWORK  [conn9] end connection 127.0.0.1:60122 (2 connections now open)
+2020-11-17T18:15:46.529+0800 I NETWORK  [conn7] end connection 127.0.0.1:60118 (1 connection now open)
+2020-11-17T18:15:46.529+0800 I NETWORK  [conn8] end connection 127.0.0.1:60120 (0 connections now open)
+2020-11-17T18:15:50.225+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60344 #13 (1 connection now open)
+2020-11-17T18:15:50.256+0800 I NETWORK  [conn13] received client metadata from 127.0.0.1:60344 conn13: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:15:50.281+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60346 #14 (2 connections now open)
+2020-11-17T18:15:50.299+0800 I NETWORK  [conn14] received client metadata from 127.0.0.1:60346 conn14: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:15:50.301+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60348 #15 (3 connections now open)
+2020-11-17T18:15:50.301+0800 I NETWORK  [conn15] received client metadata from 127.0.0.1:60348 conn15: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:15:50.307+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60350 #16 (4 connections now open)
+2020-11-17T18:15:50.308+0800 I NETWORK  [conn16] received client metadata from 127.0.0.1:60350 conn16: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:15:50.310+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60352 #17 (5 connections now open)
+2020-11-17T18:15:50.311+0800 I NETWORK  [conn17] received client metadata from 127.0.0.1:60352 conn17: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:26:11.283+0800 I NETWORK  [conn17] end connection 127.0.0.1:60352 (4 connections now open)
+2020-11-17T18:26:11.283+0800 I NETWORK  [conn16] end connection 127.0.0.1:60350 (3 connections now open)
+2020-11-17T18:26:11.283+0800 I NETWORK  [conn15] end connection 127.0.0.1:60348 (2 connections now open)
+2020-11-17T18:26:11.283+0800 I NETWORK  [conn14] end connection 127.0.0.1:60346 (1 connection now open)
+2020-11-17T18:26:11.283+0800 I NETWORK  [conn13] end connection 127.0.0.1:60344 (0 connections now open)
+2020-11-17T18:26:29.009+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60958 #18 (1 connection now open)
+2020-11-17T18:26:29.013+0800 I NETWORK  [conn18] received client metadata from 127.0.0.1:60958 conn18: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:26:29.051+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60960 #19 (2 connections now open)
+2020-11-17T18:26:29.055+0800 I NETWORK  [conn19] received client metadata from 127.0.0.1:60960 conn19: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:26:29.057+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60962 #20 (3 connections now open)
+2020-11-17T18:26:29.064+0800 I NETWORK  [conn20] received client metadata from 127.0.0.1:60962 conn20: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:26:29.065+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60964 #21 (4 connections now open)
+2020-11-17T18:26:29.066+0800 I NETWORK  [conn21] received client metadata from 127.0.0.1:60964 conn21: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:26:29.068+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60966 #22 (5 connections now open)
+2020-11-17T18:26:29.069+0800 I NETWORK  [conn22] received client metadata from 127.0.0.1:60966 conn22: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:35:35.636+0800 I NETWORK  [conn22] end connection 127.0.0.1:60966 (4 connections now open)
+2020-11-17T18:35:35.636+0800 I NETWORK  [conn21] end connection 127.0.0.1:60964 (3 connections now open)
+2020-11-17T18:35:35.636+0800 I NETWORK  [conn19] end connection 127.0.0.1:60960 (2 connections now open)
+2020-11-17T18:35:35.636+0800 I NETWORK  [conn18] end connection 127.0.0.1:60958 (1 connection now open)
+2020-11-17T18:35:35.636+0800 I NETWORK  [conn20] end connection 127.0.0.1:60962 (0 connections now open)
+2020-11-17T18:35:40.893+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:33252 #23 (1 connection now open)
+2020-11-17T18:35:40.923+0800 I NETWORK  [conn23] received client metadata from 127.0.0.1:33252 conn23: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:35:40.963+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:33254 #24 (2 connections now open)
+2020-11-17T18:35:40.968+0800 I NETWORK  [conn24] received client metadata from 127.0.0.1:33254 conn24: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:35:40.979+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:33256 #25 (3 connections now open)
+2020-11-17T18:35:40.985+0800 I NETWORK  [conn25] received client metadata from 127.0.0.1:33256 conn25: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:35:40.987+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:33258 #26 (4 connections now open)
+2020-11-17T18:35:40.988+0800 I NETWORK  [conn26] received client metadata from 127.0.0.1:33258 conn26: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:35:40.989+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:33260 #27 (5 connections now open)
+2020-11-17T18:35:40.990+0800 I NETWORK  [conn27] received client metadata from 127.0.0.1:33260 conn27: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:35:45.557+0800 I NETWORK  [conn27] end connection 127.0.0.1:33260 (4 connections now open)
+2020-11-17T18:35:45.557+0800 I NETWORK  [conn26] end connection 127.0.0.1:33258 (3 connections now open)
+2020-11-17T18:35:45.557+0800 I NETWORK  [conn25] end connection 127.0.0.1:33256 (2 connections now open)
+2020-11-17T18:35:45.557+0800 I NETWORK  [conn23] end connection 127.0.0.1:33252 (1 connection now open)
+2020-11-17T18:35:45.557+0800 I NETWORK  [conn24] end connection 127.0.0.1:33254 (0 connections now open)
+2020-11-17T18:35:56.086+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:33274 #28 (1 connection now open)
+2020-11-17T18:35:56.116+0800 I NETWORK  [conn28] received client metadata from 127.0.0.1:33274 conn28: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:35:56.151+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:33276 #29 (2 connections now open)
+2020-11-17T18:35:56.164+0800 I NETWORK  [conn29] received client metadata from 127.0.0.1:33276 conn29: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:35:56.165+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:33278 #30 (3 connections now open)
+2020-11-17T18:35:56.171+0800 I NETWORK  [conn30] received client metadata from 127.0.0.1:33278 conn30: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:35:56.172+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:33280 #31 (4 connections now open)
+2020-11-17T18:35:56.173+0800 I NETWORK  [conn31] received client metadata from 127.0.0.1:33280 conn31: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:35:56.174+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:33282 #32 (5 connections now open)
+2020-11-17T18:35:56.176+0800 I NETWORK  [conn32] received client metadata from 127.0.0.1:33282 conn32: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:37:35.725+0800 I NETWORK  [conn32] end connection 127.0.0.1:33282 (4 connections now open)
+2020-11-17T18:37:35.725+0800 I NETWORK  [conn31] end connection 127.0.0.1:33280 (3 connections now open)
+2020-11-17T18:37:35.725+0800 I NETWORK  [conn30] end connection 127.0.0.1:33278 (2 connections now open)
+2020-11-17T18:37:35.725+0800 I NETWORK  [conn28] end connection 127.0.0.1:33274 (1 connection now open)
+2020-11-17T18:37:35.725+0800 I NETWORK  [conn29] end connection 127.0.0.1:33276 (0 connections now open)
+2020-11-17T18:37:38.197+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:33386 #33 (1 connection now open)
+2020-11-17T18:37:38.228+0800 I NETWORK  [conn33] received client metadata from 127.0.0.1:33386 conn33: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:37:38.256+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:33388 #34 (2 connections now open)
+2020-11-17T18:37:38.274+0800 I NETWORK  [conn34] received client metadata from 127.0.0.1:33388 conn34: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:37:38.276+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:33390 #35 (3 connections now open)
+2020-11-17T18:37:38.276+0800 I NETWORK  [conn35] received client metadata from 127.0.0.1:33390 conn35: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:37:38.283+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:33392 #36 (4 connections now open)
+2020-11-17T18:37:38.285+0800 I NETWORK  [conn36] received client metadata from 127.0.0.1:33392 conn36: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:37:38.286+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:33394 #37 (5 connections now open)
+2020-11-17T18:37:38.288+0800 I NETWORK  [conn37] received client metadata from 127.0.0.1:33394 conn37: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:41:34.894+0800 I NETWORK  [conn37] end connection 127.0.0.1:33394 (4 connections now open)
+2020-11-17T18:41:34.894+0800 I NETWORK  [conn36] end connection 127.0.0.1:33392 (3 connections now open)
+2020-11-17T18:41:34.894+0800 I NETWORK  [conn35] end connection 127.0.0.1:33390 (2 connections now open)
+2020-11-17T18:41:34.894+0800 I NETWORK  [conn33] end connection 127.0.0.1:33386 (1 connection now open)
+2020-11-17T18:41:34.894+0800 I NETWORK  [conn34] end connection 127.0.0.1:33388 (0 connections now open)
+2020-11-17T18:41:37.621+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:33644 #38 (1 connection now open)
+2020-11-17T18:41:37.656+0800 I NETWORK  [conn38] received client metadata from 127.0.0.1:33644 conn38: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:41:37.691+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:33646 #39 (2 connections now open)
+2020-11-17T18:41:37.704+0800 I NETWORK  [conn39] received client metadata from 127.0.0.1:33646 conn39: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:41:37.706+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:33648 #40 (3 connections now open)
+2020-11-17T18:41:37.712+0800 I NETWORK  [conn40] received client metadata from 127.0.0.1:33648 conn40: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:41:37.713+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:33650 #41 (4 connections now open)
+2020-11-17T18:41:37.714+0800 I NETWORK  [conn41] received client metadata from 127.0.0.1:33650 conn41: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:41:37.715+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:33652 #42 (5 connections now open)
+2020-11-17T18:41:37.717+0800 I NETWORK  [conn42] received client metadata from 127.0.0.1:33652 conn42: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:52:53.646+0800 I NETWORK  [conn42] end connection 127.0.0.1:33652 (4 connections now open)
+2020-11-17T18:52:53.646+0800 I NETWORK  [conn41] end connection 127.0.0.1:33650 (3 connections now open)
+2020-11-17T18:52:53.646+0800 I NETWORK  [conn39] end connection 127.0.0.1:33646 (2 connections now open)
+2020-11-17T18:52:53.646+0800 I NETWORK  [conn38] end connection 127.0.0.1:33644 (1 connection now open)
+2020-11-17T18:52:53.646+0800 I NETWORK  [conn40] end connection 127.0.0.1:33648 (0 connections now open)
+2020-11-17T18:52:56.361+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:34292 #43 (1 connection now open)
+2020-11-17T18:52:56.392+0800 I NETWORK  [conn43] received client metadata from 127.0.0.1:34292 conn43: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:52:56.416+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:34294 #44 (2 connections now open)
+2020-11-17T18:52:56.429+0800 I NETWORK  [conn44] received client metadata from 127.0.0.1:34294 conn44: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:52:56.431+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:34296 #45 (3 connections now open)
+2020-11-17T18:52:56.442+0800 I NETWORK  [conn45] received client metadata from 127.0.0.1:34296 conn45: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:52:56.445+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:34298 #46 (4 connections now open)
+2020-11-17T18:52:56.446+0800 I NETWORK  [conn46] received client metadata from 127.0.0.1:34298 conn46: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:52:56.447+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:34300 #47 (5 connections now open)
+2020-11-17T18:52:56.449+0800 I NETWORK  [conn47] received client metadata from 127.0.0.1:34300 conn47: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-17T18:53:03.746+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:34310 #48 (6 connections now open)
+2020-11-17T18:53:03.756+0800 I NETWORK  [conn48] end connection 127.0.0.1:34310 (5 connections now open)
+2020-11-18T09:02:27.847+0800 I CONTROL  [signalProcessingThread] got signal 1 (Hangup), will terminate after current cmd ends
+2020-11-18T09:02:27.847+0800 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2020-11-18T09:02:27.847+0800 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-26859.sock
+2020-11-18T09:02:27.859+0800 I NETWORK  [conn47] end connection 127.0.0.1:34300 (4 connections now open)
+2020-11-18T09:02:27.861+0800 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2020-11-18T09:02:27.862+0800 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2020-11-18T09:02:27.862+0800 I STORAGE  [signalProcessingThread] Shutting down session sweeper thread
+2020-11-18T09:02:27.866+0800 I STORAGE  [signalProcessingThread] Finished shutting down session sweeper thread
+2020-11-18T09:02:27.866+0800 I NETWORK  [conn46] end connection 127.0.0.1:34298 (3 connections now open)
+2020-11-18T09:02:27.867+0800 I NETWORK  [conn45] end connection 127.0.0.1:34296 (2 connections now open)
+2020-11-18T09:02:27.867+0800 I NETWORK  [conn43] end connection 127.0.0.1:34292 (1 connection now open)
+2020-11-18T09:02:27.867+0800 I NETWORK  [conn44] end connection 127.0.0.1:34294 (0 connections now open)
+2020-11-18T09:02:28.052+0800 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2020-11-18T09:02:28.052+0800 I CONTROL  [signalProcessingThread] now exiting
+2020-11-18T09:02:28.052+0800 I CONTROL  [signalProcessingThread] shutting down with code:0
+2020-11-18T09:03:37.333+0800 I CONTROL  [main] ***** SERVER RESTARTED *****
+2020-11-18T09:03:37.350+0800 I CONTROL  [initandlisten] MongoDB starting : pid=1628 port=26859 dbpath=/www/server/mongodb/data 64-bit host=VM-0-14-centos
+2020-11-18T09:03:37.350+0800 I CONTROL  [initandlisten] db version v4.0.10
+2020-11-18T09:03:37.350+0800 I CONTROL  [initandlisten] git version: c389e7f69f637f7a1ac3cc9fae843b635f20b766
+2020-11-18T09:03:37.350+0800 I CONTROL  [initandlisten] allocator: tcmalloc
+2020-11-18T09:03:37.350+0800 I CONTROL  [initandlisten] modules: none
+2020-11-18T09:03:37.350+0800 I CONTROL  [initandlisten] build environment:
+2020-11-18T09:03:37.350+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2020-11-18T09:03:37.350+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2020-11-18T09:03:37.350+0800 I CONTROL  [initandlisten] options: { config: "/www/server/mongodb/config.conf", net: { bindIp: "127.0.0.1", port: 26859 }, processManagement: { fork: true, pidFilePath: "/www/server/mongodb/log/configsvr.pid" }, security: { authorization: "disabled", javascriptEnabled: false }, storage: { dbPath: "/www/server/mongodb/data", directoryPerDB: true, journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/www/server/mongodb/log/config.log" } }
+2020-11-18T09:03:37.365+0800 I STORAGE  [initandlisten] Detected data files in /www/server/mongodb/data created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-11-18T09:03:37.366+0800 I STORAGE  [initandlisten] 
+2020-11-18T09:03:37.366+0800 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-11-18T09:03:37.366+0800 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-11-18T09:03:37.366+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=402M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2020-11-18T09:03:38.853+0800 I STORAGE  [initandlisten] WiredTiger message [1605661418:853457][1628:0x7f2cf19e4a40], txn-recover: Main recovery loop: starting at 2/408192 to 3/256
+2020-11-18T09:03:38.987+0800 I STORAGE  [initandlisten] WiredTiger message [1605661418:987982][1628:0x7f2cf19e4a40], txn-recover: Recovering log 2 through 3
+2020-11-18T09:03:39.073+0800 I STORAGE  [initandlisten] WiredTiger message [1605661419:73750][1628:0x7f2cf19e4a40], txn-recover: Recovering log 3 through 3
+2020-11-18T09:03:39.127+0800 I STORAGE  [initandlisten] WiredTiger message [1605661419:127569][1628:0x7f2cf19e4a40], txn-recover: Set global recovery timestamp: 0
+2020-11-18T09:03:39.156+0800 I RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-11-18T09:03:39.589+0800 I CONTROL  [initandlisten] 
+2020-11-18T09:03:39.589+0800 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2020-11-18T09:03:39.589+0800 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2020-11-18T09:03:39.589+0800 I CONTROL  [initandlisten] 
+2020-11-18T09:03:39.589+0800 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. rlimits set to 7211 processes, 100001 files. Number of processes should be at least 50000.5 : 0.5 times number of files.
+2020-11-18T09:03:39.589+0800 I CONTROL  [initandlisten] 
+2020-11-18T09:03:39.684+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/www/server/mongodb/data/diagnostic.data'
+2020-11-18T09:03:39.685+0800 I NETWORK  [initandlisten] waiting for connections on port 26859
+2020-11-18T09:40:28.506+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:57946 #1 (1 connection now open)
+2020-11-18T09:40:28.517+0800 I NETWORK  [conn1] received client metadata from 127.0.0.1:57946 conn1: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T09:40:28.538+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:57948 #2 (2 connections now open)
+2020-11-18T09:40:28.539+0800 I NETWORK  [conn2] received client metadata from 127.0.0.1:57948 conn2: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T09:40:28.541+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:57950 #3 (3 connections now open)
+2020-11-18T09:40:28.541+0800 I NETWORK  [conn3] received client metadata from 127.0.0.1:57950 conn3: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T09:40:28.541+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:57952 #4 (4 connections now open)
+2020-11-18T09:40:28.548+0800 I NETWORK  [conn4] received client metadata from 127.0.0.1:57952 conn4: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T09:40:28.549+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:57954 #5 (5 connections now open)
+2020-11-18T09:40:28.551+0800 I NETWORK  [conn5] received client metadata from 127.0.0.1:57954 conn5: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T10:18:31.114+0800 I NETWORK  [conn5] end connection 127.0.0.1:57954 (4 connections now open)
+2020-11-18T10:18:31.114+0800 I NETWORK  [conn4] end connection 127.0.0.1:57952 (3 connections now open)
+2020-11-18T10:18:31.114+0800 I NETWORK  [conn2] end connection 127.0.0.1:57948 (2 connections now open)
+2020-11-18T10:18:31.114+0800 I NETWORK  [conn1] end connection 127.0.0.1:57946 (1 connection now open)
+2020-11-18T10:18:31.114+0800 I NETWORK  [conn3] end connection 127.0.0.1:57950 (0 connections now open)
+2020-11-18T10:19:08.689+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60248 #6 (1 connection now open)
+2020-11-18T10:19:08.703+0800 I NETWORK  [conn6] received client metadata from 127.0.0.1:60248 conn6: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T10:19:08.742+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60250 #7 (2 connections now open)
+2020-11-18T10:19:08.745+0800 I NETWORK  [conn7] received client metadata from 127.0.0.1:60250 conn7: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T10:19:08.747+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60252 #8 (3 connections now open)
+2020-11-18T10:19:08.752+0800 I NETWORK  [conn8] received client metadata from 127.0.0.1:60252 conn8: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T10:19:08.754+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60254 #9 (4 connections now open)
+2020-11-18T10:19:08.755+0800 I NETWORK  [conn9] received client metadata from 127.0.0.1:60254 conn9: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T10:19:08.756+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60256 #10 (5 connections now open)
+2020-11-18T10:19:08.758+0800 I NETWORK  [conn10] received client metadata from 127.0.0.1:60256 conn10: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T10:19:37.453+0800 I NETWORK  [conn10] end connection 127.0.0.1:60256 (4 connections now open)
+2020-11-18T10:19:37.453+0800 I NETWORK  [conn9] end connection 127.0.0.1:60254 (3 connections now open)
+2020-11-18T10:19:37.454+0800 I NETWORK  [conn7] end connection 127.0.0.1:60250 (2 connections now open)
+2020-11-18T10:19:37.454+0800 I NETWORK  [conn6] end connection 127.0.0.1:60248 (1 connection now open)
+2020-11-18T10:19:37.454+0800 I NETWORK  [conn8] end connection 127.0.0.1:60252 (0 connections now open)
+2020-11-18T10:19:47.238+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60294 #11 (1 connection now open)
+2020-11-18T10:19:47.270+0800 I NETWORK  [conn11] received client metadata from 127.0.0.1:60294 conn11: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T10:19:47.304+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60296 #12 (2 connections now open)
+2020-11-18T10:19:47.311+0800 I NETWORK  [conn12] received client metadata from 127.0.0.1:60296 conn12: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T10:19:47.315+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60298 #13 (3 connections now open)
+2020-11-18T10:19:47.320+0800 I NETWORK  [conn13] received client metadata from 127.0.0.1:60298 conn13: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T10:19:47.321+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60300 #14 (4 connections now open)
+2020-11-18T10:19:47.323+0800 I NETWORK  [conn14] received client metadata from 127.0.0.1:60300 conn14: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T10:19:47.324+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:60302 #15 (5 connections now open)
+2020-11-18T10:19:47.325+0800 I NETWORK  [conn15] received client metadata from 127.0.0.1:60302 conn15: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T10:30:41.010+0800 I NETWORK  [conn15] end connection 127.0.0.1:60302 (4 connections now open)
+2020-11-18T10:30:41.010+0800 I NETWORK  [conn14] end connection 127.0.0.1:60300 (3 connections now open)
+2020-11-18T10:30:41.010+0800 I NETWORK  [conn13] end connection 127.0.0.1:60298 (2 connections now open)
+2020-11-18T10:30:41.010+0800 I NETWORK  [conn12] end connection 127.0.0.1:60296 (1 connection now open)
+2020-11-18T10:30:41.010+0800 I NETWORK  [conn11] end connection 127.0.0.1:60294 (0 connections now open)
+2020-11-18T11:07:06.892+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:34848 #16 (1 connection now open)
+2020-11-18T11:07:06.924+0800 I NETWORK  [conn16] received client metadata from 127.0.0.1:34848 conn16: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T11:07:06.966+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:34850 #17 (2 connections now open)
+2020-11-18T11:07:06.968+0800 I NETWORK  [conn17] received client metadata from 127.0.0.1:34850 conn17: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T11:07:06.969+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:34852 #18 (3 connections now open)
+2020-11-18T11:07:06.975+0800 I NETWORK  [conn18] received client metadata from 127.0.0.1:34852 conn18: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T11:07:06.976+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:34854 #19 (4 connections now open)
+2020-11-18T11:07:06.977+0800 I NETWORK  [conn19] received client metadata from 127.0.0.1:34854 conn19: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T11:07:06.978+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:34856 #20 (5 connections now open)
+2020-11-18T11:07:06.980+0800 I NETWORK  [conn20] received client metadata from 127.0.0.1:34856 conn20: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T11:14:09.052+0800 I NETWORK  [conn20] end connection 127.0.0.1:34856 (4 connections now open)
+2020-11-18T11:14:09.053+0800 I NETWORK  [conn19] end connection 127.0.0.1:34854 (3 connections now open)
+2020-11-18T11:14:09.053+0800 I NETWORK  [conn18] end connection 127.0.0.1:34852 (2 connections now open)
+2020-11-18T11:14:09.053+0800 I NETWORK  [conn17] end connection 127.0.0.1:34850 (1 connection now open)
+2020-11-18T11:14:09.053+0800 I NETWORK  [conn16] end connection 127.0.0.1:34848 (0 connections now open)
+2020-11-18T11:14:27.428+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:35294 #21 (1 connection now open)
+2020-11-18T11:14:27.443+0800 I NETWORK  [conn21] received client metadata from 127.0.0.1:35294 conn21: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T11:14:27.482+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:35296 #22 (2 connections now open)
+2020-11-18T11:14:27.485+0800 I NETWORK  [conn22] received client metadata from 127.0.0.1:35296 conn22: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T11:14:27.487+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:35298 #23 (3 connections now open)
+2020-11-18T11:14:27.492+0800 I NETWORK  [conn23] received client metadata from 127.0.0.1:35298 conn23: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T11:14:27.494+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:35300 #24 (4 connections now open)
+2020-11-18T11:14:27.496+0800 I NETWORK  [conn24] received client metadata from 127.0.0.1:35300 conn24: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-11-18T11:14:27.497+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:35302 #25 (5 connections now open)
+2020-11-18T11:14:27.498+0800 I NETWORK  [conn25] received client metadata from 127.0.0.1:35302 conn25: { driver: { name: "nodejs-core", version: "3.3.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.18.0-80.el8.x86_64" }, platform: "Node.js v10.15.3, LE" }
+2020-12-28T00:29:04.498+0800 I COMMAND  [conn22] command yapi.user command: find { find: "user", filter: { email: "wangyahao" }, projection: {}, limit: 1, singleBatch: true, batchSize: 1, returnKey: false, showRecordId: false, lsid: { id: UUID("2e57fbb3-1d93-429b-b258-2771a656424c") }, $db: "yapi" } planSummary: IXSCAN { email: 1 } keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:0 nreturned:0 reslen:98 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } storage:{} protocol:op_msg 121ms
+2020-12-28T00:29:18.773+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:44612 #26 (6 connections now open)
+2020-12-28T00:29:18.989+0800 I NETWORK  [conn26] received client metadata from 127.0.0.1:44612 conn26: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-12-28T00:29:19.089+0800 I NETWORK  [conn26] end connection 127.0.0.1:44612 (5 connections now open)
+2020-12-28T00:29:31.385+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:44624 #27 (6 connections now open)
+2020-12-28T00:29:31.388+0800 I NETWORK  [conn27] received client metadata from 127.0.0.1:44624 conn27: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-12-28T00:29:31.396+0800 I NETWORK  [conn27] end connection 127.0.0.1:44624 (5 connections now open)
+2020-12-28T00:29:36.820+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:44632 #28 (6 connections now open)
+2020-12-28T00:29:36.822+0800 I NETWORK  [conn28] received client metadata from 127.0.0.1:44632 conn28: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-12-28T00:29:36.830+0800 I NETWORK  [conn28] end connection 127.0.0.1:44632 (5 connections now open)
+2020-12-28T00:29:45.554+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:44640 #29 (6 connections now open)
+2020-12-28T00:29:45.555+0800 I NETWORK  [conn29] received client metadata from 127.0.0.1:44640 conn29: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-12-28T00:29:45.564+0800 I NETWORK  [conn29] end connection 127.0.0.1:44640 (5 connections now open)
+2020-12-28T00:29:47.601+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:44646 #30 (6 connections now open)
+2020-12-28T00:29:47.602+0800 I NETWORK  [conn30] received client metadata from 127.0.0.1:44646 conn30: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-12-28T00:29:47.611+0800 I NETWORK  [conn30] end connection 127.0.0.1:44646 (5 connections now open)
+2020-12-28T00:31:30.817+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:44746 #31 (6 connections now open)
+2020-12-28T00:31:30.817+0800 I NETWORK  [conn31] received client metadata from 127.0.0.1:44746 conn31: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-12-28T00:31:30.826+0800 I NETWORK  [conn31] end connection 127.0.0.1:44746 (5 connections now open)
+2020-12-28T00:31:41.019+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:44762 #32 (6 connections now open)
+2020-12-28T00:31:41.019+0800 I NETWORK  [conn32] received client metadata from 127.0.0.1:44762 conn32: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-12-28T00:31:41.028+0800 I NETWORK  [conn32] end connection 127.0.0.1:44762 (5 connections now open)
+2020-12-28T00:31:50.841+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:44778 #33 (6 connections now open)
+2020-12-28T00:31:50.846+0800 I NETWORK  [conn33] received client metadata from 127.0.0.1:44778 conn33: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-12-28T00:31:50.867+0800 I NETWORK  [conn33] end connection 127.0.0.1:44778 (5 connections now open)
+2020-12-28T00:31:54.638+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:44782 #34 (6 connections now open)
+2020-12-28T00:31:54.638+0800 I NETWORK  [conn34] received client metadata from 127.0.0.1:44782 conn34: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-12-28T00:31:54.647+0800 I NETWORK  [conn34] end connection 127.0.0.1:44782 (5 connections now open)
+2020-12-28T00:33:33.349+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:44878 #35 (6 connections now open)
+2020-12-28T00:33:33.350+0800 I NETWORK  [conn35] received client metadata from 127.0.0.1:44878 conn35: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.10" }, os: { type: "Linux", name: "CentOS Linux release 8.0.1905 (Core) ", architecture: "x86_64", version: "Kernel 4.18.0-80.el8.x86_64" } }
+2020-12-28T00:33:33.369+0800 I NETWORK  [conn35] end connection 127.0.0.1:44878 (5 connections now open)
+2020-12-28T00:33:41.230+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.$cmd command: update { update: "system.sessions", ordered: false, allowImplicitCollectionCreation: false, writeConcern: { w: "majority", wtimeout: 15000 }, $db: "config" } numYields:0 reslen:171 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } storage:{} protocol:op_msg 104ms
